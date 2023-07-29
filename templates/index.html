@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovian Careers</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <!--<link rel="stylesheet" type="text/css" href="static/css/index.css"/>-->
+    <!--{{url_for('static',filename='css/index.css')}}-->
+    <style>
+        #banner{
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body >
+   {% include 'nav.html' %}
+   <img id="banner" src="static/banner.jpg" alt="banner image">
+    <div >
+        <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+    </div>
+    <<div class="container">
+        <h3 class="text-center mt-2">About {{company_name}}</h3>
+       <div class="row mb-16">
+            <div class="col-md-6">        
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ultrices gravida dictum fusce ut placerat orci. 
+                    Pellentesque massa placerat duis ultricies lacus. 
+                    Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. 
+                    Placerat vestibulum lectus mauris ultrices eros in cursus. 
+                    Nec ultrices dui sapien eget. Risus viverra adipiscing at in tellus. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ultrices gravida dictum fusce ut placerat orci. 
+                    Pellentesque massa placerat duis ultricies lacus. 
+                    Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. 
+                    Placerat vestibulum lectus mauris ultrices eros in cursus. 
+                    Nec ultrices dui sapien eget. Risus viverra adipiscing at in tellus. 
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="static/workers.jpg" alt="Workers image" style="height: 320px; border-radius:14px;">
+            </div>
+        </div>
+        <h2 class="text-center mt-4 mb-2">Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <a type="button" class="btn btn-primary btn-lg" href="mailto:hilarychi@gmail.com?subject:Enquiries">Contact Us</a> 
+        </div>
+        
+    </div>
+    {% include 'footer.html' %}
+    <script src="static/js/bootstrap.min.js"></script>
+</body>
+</html>
