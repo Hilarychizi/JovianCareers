@@ -6,8 +6,7 @@ app=Flask(__name__)
 @app.route('/')
 def index():
     jobs_list=load_jobs_from_db()
-    return render_template('index.html',jobs=jobs_list,
-                           company_name="Ekwe ")
+    return render_template('index.html',jobs=jobs_list)
 
 @app.route("/jobs")
 def list_jobs():

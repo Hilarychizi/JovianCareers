@@ -1,15 +1,14 @@
 <div class="mb-2 border-bottom row pd-4">
        <div class="col-9">
-            <h4  class="text-primary">{{job['title']}}</h4>
-            <div><b>Location: </b>{{job['location']}}</div>
+            <h4  class="text-primary">{{job.title}}</h4>
+            <div><b>Location: </b>{{job.location}}</div>
             {% if 'salary' in job %}
-                <div>Salary: {{job['currency']}}{{job['salary']}}</div>
+                <div>Salary: {{job.currency}}{{job.salary}}</div>
             {% else %}
                 <div>Salary: <i>Negotiable and mouth-watering</i></div>
             {% endif %}
     </div>
     <div class="col-2  ">
-        <a type="button" href="mailto:hilarychizi@gmail.com?subject=Application for {{job['title']}}" class="btn btn-primary row mt-4">Apply</a>
+        <a type="button" href="/job/{{job.id}}" class="btn btn-primary row mt-4">Apply</a>
     </div>
  </div>
- 
