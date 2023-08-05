@@ -1,13 +1,31 @@
 <div class="container">
     <h4 class="text-secondary mb-2">Application Form</h4>
-    <form action="POST">
-        <label for="name">Full Name</label><br>
-        <input type="text" name="full_name" id="name" placeholder="Enter Full Name" class="mb-2"><br>
-        
-        <label for="email">E - Mail</label><br>
-        <input type="text" name="email" placeholder="hilarychizi@gmail.com.com" id="email" class="mb-2"><br>
-        <label for="linkedIn">LinkedIn URL</label><br>
-         <input type="text" name="linkedIn" placeholder="https://linked.in/hilarychizi" id="linkedIn" class="mb-2"><br>
-         <input type="submit" name="submit" id="submit">
+    <form action="/job/{{job['id']}}/apply" method="post">
+        <div class="mb-2">
+            <label for="name">Full Name</label><br>
+            <input type="text" name="full_name" id="name" placeholder="Enter Full Name">
+        </div>
+        <div class="mb-2">
+            <label for="email">E - Mail</label><br>
+            <input type="text" name="email" placeholder="hilarychizi@gmail.com.com" id="email" >            
+        </div> 
+
+         <div class="mb-2">
+            <label for="linkedIn">LinkedIn URL</label><br>
+            <input type="text" name="linkedIn" placeholder="https://linked.in/hilarychizi" id="linkedIn">            
+         </div>
+        <div class="mb-2">
+            <label for="education">Education</label><br>
+            <textarea name="education" id="eduction"></textarea>
+        </div>
+         <div class="mb-2">
+            <label for="work">Work Experience</label><br>
+            <textarea name="work_experience" id="work"></textarea>
+         </div>
+         <div class="mb-2">
+            <label for="resume">Resume URL</label><br>
+            <input type="text" name="resume_url" placeholder="Resume link" id="resume">            
+         </div>
+        <input type="submit" id="submit">
     </form>
 </div>
