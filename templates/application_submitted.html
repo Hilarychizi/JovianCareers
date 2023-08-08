@@ -3,8 +3,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Submitted</title>
+    {% include 'bootstrap.html' %}
+
 </head>
 <body>
-    
-</body>
+    {% include 'nav.html' %}
+   {% include 'banner.html' %}
+   <div class="container">
+    <h1 class="text-center mt-3 mb-4">
+        Ekwe Careers
+    </h1>
+    <p class="text-info text-center">Your application for {{job.title}} has been successfully submitted!</p>
+        <h4>Full Name</h4>
+        <div class="mb-2">{{application['full_name']}}</div>
+        <b>E-Mail</b>
+        <div>{{application['email']}}</div>
+        
+        <b>LinkedIn URL</b>
+        <div>{{application['linkedin']}}</div>
+        
+        <b>Education</b>
+        <div>{{application['education']}}</div>
+        
+        <b>Work Experience</b>
+        <div>{{application['work_experience']}}</div>
+
+    {% include 'footer.html' %}
+
+    </body>
+   </div>
 </html>
