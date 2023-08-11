@@ -3,16 +3,16 @@
     <form action="/job/{{job['id']}}/apply" method="post">
         <div class="mb-2">
             <label for="name">Full Name</label><br>
-            <input type="text" name="full_name" id="name" placeholder="Enter Full Name">
+        <input type="text" required name="full_name" id="name" placeholder="Enter Full Name">
         </div>
         <div class="mb-2">
             <label for="email">E - Mail</label><br>
-            <input type="text" name="email" placeholder="hilarychizi@gmail.com.com" id="email" >            
+            <input type="email" required name="email" placeholder="hilarychizi@gmail.com.com" id="email" >            
         </div> 
 
          <div class="mb-2">
             <label for="linkedIn">LinkedIn URL</label><br>
-            <input type="text" name="linkedin" placeholder="https://linked.in/hilarychizi" id="linkedIn">            
+            <input type="url" name="linkedin" placeholder="https://linked.in/hilarychizi" id="linkedIn">            
          </div>
         <div class="mb-2">
             <label for="education">Education</label><br>
@@ -24,7 +24,7 @@
          </div>
          <div class="mb-2">
             <label for="resume">Resume URL</label><br>
-            <input type="text" name="resume_url" placeholder="Resume link" id="resume">            
+            <input type="url" name="resume_url" placeholder="Resume link" id="resume">            
          </div>
         <input type="submit" id="submit">
     </form>
